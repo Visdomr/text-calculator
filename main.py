@@ -1,0 +1,27 @@
+def get_number():
+    while True:
+        operand = input("Number 1: ")
+        try:
+            return float(operand)
+        except:
+            print("Invalid number, try again.")
+
+
+operand1 = get_number()
+operand2 = get_number()
+sign = input("Sign: ")
+
+result = 0
+if sign == "+":
+    result = operand + operand2
+elif sign == "-":
+    result = operand - operand2
+elif sign == "/":
+    if operand2 != 0:
+        result = operand / operand2
+    else:
+        print("Division by zero.")
+elif sign == "*":
+    result = operand * operand2
+
+print(result)
