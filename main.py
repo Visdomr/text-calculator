@@ -1,14 +1,14 @@
-def get_number():
+def get_number(number):
     while True:
-        operand = input("Number 1: ")
+        operand = input("Number " + str(number) + ": ")
         try:
             return float(operand)
         except:
             print("Invalid number, try again.")
 
 
-operand1 = get_number()
-operand2 = get_number()
+operand = get_number(1)
+operand2 = get_number(2)
 sign = input("Sign: ")
 
 result = 0
